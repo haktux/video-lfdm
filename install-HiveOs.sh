@@ -15,6 +15,7 @@ python3 -m venv /env/
 
 
 echo -e "${vertclaire}Installation du bot${neutre}"
+mkdir -p /home/user/video-lfdm/
 cd /home/user/video-lfdm/
 source /env/bin/activate
 python3 -m pip install --upgrade pip
@@ -26,6 +27,6 @@ mkdir log
 
 echo -e "${vertclaire}Création de la boucle d'actualisation du bot${neutre}"
 echo "# trading bot 1h" >> /hive/etc/crontab.root
-echo "00 */1 * * * /env/bin/python3 /home/user/video-lfdm/cross_ema_live.py >> /home/user/video-lfdm/log/log.log" >> /hive/etc/crontab.root
+echo "0 */1 * * * /env/bin/python3 /home/user/video-lfdm/cross_ema_live.py >> /home/user/video-lfdm/log/log.log" >> /hive/etc/crontab.root
 
 echo -e "${vertclaire}Installation réussite renseignez votre clé API${neutre}"
